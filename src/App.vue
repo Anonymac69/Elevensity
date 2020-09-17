@@ -1,28 +1,50 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="frame">
+    <navigation/>
+    <router-view></router-view>
+    <!-- <add-blog></add-blog> -->
+    <!-- <show-blog></show-blog>
+    <copyright></copyright>
+    <list-blogs></list-blogs> -->
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import navigation from './components/navigation.vue'
+// import addBlog from './components/addBlog.vue'
+// import showBlog from './components/showBlog.vue'
+// import copyright from './components/copyright.vue'
+// import listBlogs from './components/listBlogs.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    navigation
+    // addBlog,
+    // showBlog,
+    // copyright,
+    // listBlogs
+  },
+  data() {
+    return {
+      
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .frame {
+    background: url('./assets/img/white01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+  }
 </style>
